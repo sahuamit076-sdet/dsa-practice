@@ -1,4 +1,4 @@
-package dsa.interview_experience;
+package dsa.interview_experience.medium;
 
 import java.util.Arrays;
 import java.util.HashMap;

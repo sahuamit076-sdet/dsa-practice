@@ -1,4 +1,4 @@
-package dsa.mathematical;
+package dsa.mathematical.easy;
 
 public class Gcd {
 

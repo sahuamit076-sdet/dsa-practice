@@ -1,8 +1,4 @@
-package dsa.sorting;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+package dsa.sorting.medium;
 
 public class Sorting4_QuickSort {
 

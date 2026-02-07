@@ -1,4 +1,4 @@
-package dsa.mathematical;
+package dsa.mathematical.easy;
 
 
 //Approach 1 to find all divisors of a number

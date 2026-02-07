@@ -1,4 +1,4 @@
-package dsa.sorting;
+package dsa.sorting.easy;
 
 import java.util.Arrays;
 
