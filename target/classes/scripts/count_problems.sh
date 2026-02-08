@@ -32,5 +32,15 @@ done
 
 TABLE+="| **TOTAL** | **$TOTAL_EASY** | **$TOTAL_MEDIUM** | **$TOTAL_HARD** | **$GRAND_TOTAL** |\n"
 
-# Clear README and rewrite
-printf "%b" "$TABLE" > "$README"
+awk -v table="$TABLE" '
+/<!-- DSA-TABLE-START -->/ {
+  print
+  print table
+  skip=1
+  next
+}
+/<!-- DSA-TABLE-END -->/ {
+  skip=0
+}
+!skip
+' "$README" > "$README.tmp" && mv "$README.tmp" "$README"
