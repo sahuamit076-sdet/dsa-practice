@@ -1,4 +1,4 @@
-package dsa.interview_experience.medium;
+package dsa.interview_experience.easy;
 
 public class MinSwaps1s0s {
 
