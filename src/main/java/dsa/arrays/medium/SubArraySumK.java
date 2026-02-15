@@ -1,6 +1,7 @@
 package dsa.arrays.medium;
 
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -55,17 +56,27 @@ public class SubArraySumK {
         int sum = 0;
         int maxLength = 0;
 
+        int left = -1;
+        int right = -1;
+
         while (end < arr.length) {
             while (sum > k && start <= end) { // Shrink the window if sum exceeds k
                 sum -= arr[start]; // Reduce the sum by removing elements from the start
                 start++; // Shrink the window from the left
             }
             if (sum == k) { // Check if we found a subarray with sum k
-                maxLength = Math.max(maxLength, end - start);
+                //maxLength = Math.max(maxLength, end - start);
+                if ((end - start) > maxLength) {
+                    maxLength = end - start;
+                    left = start;
+                    right = end;
+                }
             }
             sum += arr[end];
             end++;
         }
+
+        System.out.println(Arrays.toString(Arrays.copyOfRange(arr, left, right)));
 
         return maxLength;
     }

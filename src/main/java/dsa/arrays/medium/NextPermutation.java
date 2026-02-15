@@ -26,8 +26,8 @@ public class NextPermutation {
         }
         //step 3: find the first element greater than digits[index] from the end : O(n)
         int index2 = -1;
-        for (int i = digits.length - 2; i >= 0; i--) {
-            if (digits[i] < digits[i + 1]) {
+        for(int i =digits.length-1; i>=0; i--){
+            if(digits[i] > digits[index1]) {
                 index2 = i;
                 break;
             }

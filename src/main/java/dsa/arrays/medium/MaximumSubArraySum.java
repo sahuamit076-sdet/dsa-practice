@@ -7,6 +7,8 @@ package dsa.arrays.medium;
 // Time complexity : O(n) where n is the number of elements in the array
 
 
+import java.util.Arrays;
+
 public class MaximumSubArraySum {
 
     public static void main(String[] args) {
@@ -30,7 +32,8 @@ public class MaximumSubArraySum {
                 sum = 0;
             }
         }
-        System.out.println("Start Index: " + start + ", End Index: " + end);
+        int[] subArr = Arrays.copyOfRange(arr, start, end+1);
+        System.out.println(Arrays.toString(subArr));
         return maxSum;
     }
 }
