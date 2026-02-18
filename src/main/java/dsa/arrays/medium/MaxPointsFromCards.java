@@ -9,20 +9,19 @@ public class MaxPointsFromCards {
         System.out.println(max);
     }
 
-    static int maxPoints(int[] points, int limit) {
-        int n = points.length;
+    static int maxPoints(int[] points, int k) {
         int sum = 0;
-        for (int i = 0; i < limit; i++) {
-            sum += points[i];
+        for(int i = 0 ; i < k; i++) {
+            sum+=points[i];
         }
-
 
         int leftSum = sum;
         int rightSum = 0;
-        for (int i = limit-1, j = 0; i >= 0; i--, j++) {
-            leftSum = leftSum - points[i];
-            rightSum = rightSum + points[n - 1 - j];
-            sum = Math.max(sum, leftSum + rightSum);
+        int n = points.length;
+        for(int j = 0 ; j < k; j++) {
+            rightSum+=points[n-1-j];
+            leftSum = leftSum - points[k-j-1];
+            sum = Math.max(sum, leftSum+rightSum);
         }
 
         return sum;
