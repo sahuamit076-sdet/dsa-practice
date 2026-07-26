@@ -15,7 +15,7 @@ public class GroupSimilarPatternString {
 
     static void groupPattern(String[] input) {
 
-        Map<String, List<String>> groups = new HashMap<>();
+        Map<String, List<String>>  groups = new HashMap<>();
 
         for (String s : input) {
             Map<Character, Integer> pointers = new HashMap<>();
